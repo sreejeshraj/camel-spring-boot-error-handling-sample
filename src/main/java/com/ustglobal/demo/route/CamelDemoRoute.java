@@ -31,6 +31,7 @@ public class CamelDemoRoute extends RouteBuilder {
 		
 		onException(Exception.class)
 		.routeId("myExceptionRoute")
+		//CamelExceptionCaught
 		//.log("****EXCEPTION_CAUGHT BEFORE:${exchangeProperty.EXCEPTION_CAUGHT}****")
 		.handled(true)
 		.process(new ExchangePropertyPrinterProcessor())
